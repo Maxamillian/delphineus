@@ -10,11 +10,7 @@ const port = process.env.PORT || 3000;
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-<<<<<<< HEAD
 app.use(express.static(path.join(__dirname, '../client')));
-=======
-app.use(express.static(path.join(__dirname, '/')));
->>>>>>> Add start script to run server and Fixed model syntax issues
 app.use('/api', routes);
 
 app.get('/api/test', function(req, res) {
@@ -46,7 +42,5 @@ ________+++++++8888888888_
 ________+++++++0088888888_
 ________++++++0088888888_
 ________+++++0008888888_
-<<<<<<< HEAD
-<<<<<<< HEAD
 ________#############_`);
 });
