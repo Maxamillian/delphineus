@@ -2,11 +2,6 @@ var Resource = require('../models').Resource;
 
 module.exports = {
   getResources: function(req, res) {
-    // promise version
-    // Resource.findAll()
-    //   .then(function() {
-    //     res.send();
-    //   });
     res.send('Im Working');
   },
 
@@ -23,7 +18,7 @@ module.exports = {
   },
 
   postLikes: function(req, res) {
-    // todo
+    res.send('Im Working');
   },
 
   getCategories: function(req, res) {
@@ -31,7 +26,7 @@ module.exports = {
   },
 
   getTags: function(req, res) {
-    // todo
+    res.send('Im Working');
   },
 
   getBookmarks: function(req, res) {
