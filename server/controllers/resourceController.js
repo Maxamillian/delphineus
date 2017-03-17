@@ -1,23 +1,12 @@
-var Resource = require('../models').Resource;
-var Like = require('../models').Like;
-var Bookmark = require('../models').Bookmark;
-var Category = require('../models').Category;
-var Tag = require('../models').Tag;
+var Resource = require('./models').Resource;
 
 module.exports = {
   getResources: function(req, res) {
-    Resource.findAll({
-      include: [
-        { model: User },
-        { model: Like },
-        { model: Bookmark },
-        { model: Category },
-        { model: Tag }
-      ]
-    })
-    .then(function(resources) {
-      res.send(resources);
-    });
+    // promise version
+    Resource.findAll()
+      .then(function() {
+        res.send();
+      });
   },
 
   postResource: function(req, res) {
@@ -33,11 +22,7 @@ module.exports = {
   },
 
   postLikes: function(req, res) {
-    Like.create({
-      // this will need to get pulled from the session once it's setup
-      ResourceId: req.body.resourceId,
-      UserId: req.body.userId
-    });
+    // todo
   },
 
   getCategories: function(req, res) {
@@ -45,10 +30,7 @@ module.exports = {
   },
 
   getTags: function(req, res) {
-    Tag.findAll().
-      then(function(tags) {
-        res.send(tags);
-      });
+    // todo
   },
 
   getBookmarks: function(req, res) {
