@@ -10,7 +10,11 @@ const port = process.env.PORT || 3000;
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+<<<<<<< HEAD
 app.use(express.static(path.join(__dirname, '../client')));
+=======
+app.use(express.static(path.join(__dirname, '/')));
+>>>>>>> Add start script to run server and Fixed model syntax issues
 app.use('/api', routes);
 
 app.get('/api/test', function(req, res) {
@@ -45,10 +49,4 @@ ________+++++0008888888_
 <<<<<<< HEAD
 <<<<<<< HEAD
 ________#############_`);
-=======
-________#############_`)
->>>>>>> Add missing semicolons
-=======
-________#############_`);
->>>>>>> Remove unused index.js and add missing syntax server.js
 });
