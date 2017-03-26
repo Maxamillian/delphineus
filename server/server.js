@@ -27,6 +27,7 @@ app.use(session({ secret: 'keyboard cat', resave: false, saveUninitialized: fals
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, '../client')));
+
 app.use('/api', routes);
 app.use('/auth', authRoutes);
 
